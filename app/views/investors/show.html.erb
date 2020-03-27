@@ -39,8 +39,10 @@
   <% @investor.files.each do |file| %>
     <li>
     <% if file.previewable? %>
+      <p>Download: <%= link_to file.filename, rails_blob_path(file, disposition: "attachment") %></p>
       <%= image_tag file.preview(resize: "100x100") %>
     <% elsif file.representable? %>
+      <p>Download:<%= link_to file.filename, rails_blob_path(file, disposition: "attachment") %></p>
       <%= image_tag url_for(file) %>
     <% else %>
       <p>Preview Not Available </p>
