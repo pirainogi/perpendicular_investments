@@ -10,7 +10,6 @@ class InvestorsController < ApplicationController
   # GET /investors/1
   # GET /investors/1.json
   def show
-    # byebug
   end
 
   # GET /investors/new
@@ -26,7 +25,6 @@ class InvestorsController < ApplicationController
   # POST /investors.json
   def create
     @investor = Investor.new(investor_params)
-    # byebug
 
     respond_to do |format|
       if @investor.save
