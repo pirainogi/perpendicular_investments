@@ -54,3 +54,4 @@ Investors also includes Delete functionality. Includes are links to aid in navig
 ## Future Features
 * Tests
 * Ability to detect creation of new Investor when update of existing Investor is actually necessary
+* 404 page if client navigates to page that doesn't exist 
