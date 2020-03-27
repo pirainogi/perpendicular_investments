@@ -30,12 +30,12 @@ In order to run this app, first clone this repo down onto your local machine and
 ## Navigation in Browser
 Your server will automatically spin up on `localhost:3000` unless otherwise specified. The available routes to you include:
 * `localhost:3000/` will render the homepage and direct clients to either login or signup
-* `localhost:3000/login` will render the login form and authenticate/authorize previously created users to access the application. The client is redirected to their user page if successful.
-* `localhost:3000/users/new` will render a form to create a new user, and will POST to the database if the entered data is valid. Client is redirected to their User show page if successful
-* `localhost:3000/users/[:id]` will render the logged in User's show page with a table of their associated Investors and links for RUD functionality. A link is provided to also create a new Investor for ease of access. If client attempts to navigate to other User show page, they are directed back to their own show page.
-* `localhost:3000/users/[:id]/edit` will render a form to edit an existing User, and will PATCH to the database if the entered data is valid. Client is redirected to User show page if successful
+* `localhost:3000/login` will render the login form and authenticate/authorize a previously created User to access the application. The client is redirected to their User show page if successful
+* `localhost:3000/users/new` will render a form to create a new User, and will POST to the database if the entered data is valid. Client is redirected to their User show page if successful
+* `localhost:3000/users/[:id]` will render the logged in User's show page with a table of their associated Investors and links for RUD functionality. A link is also provided to create a new Investor. If client attempts to navigate to other User show page, they are directed back to their own show page.
+* `localhost:3000/users/[:id]/edit` will render a form to edit the logged in User, and will PATCH to the database if the entered data is valid. Client is redirected to User show page if successful
 * `localhost:3000/investors` will render all of the logged in User's associated Investors
-* `localhost:3000/investors/new` will render a form to create a new investor, and will POST to the database if the entered data is valid
+* `localhost:3000/investors/new` will render a form to create a new Investor (associated with logged in User), and will POST to the database if valid
   * The form allows the client to select _multiple_ files and they are associated with that Investor. Files are saved locally. JS and CSS are implemented to render file upload progress for all selected files.  
 * `localhost:3000/investors/[:id]` will render a specific Investor with previews for image and PDF files. A link to download the file is also rendered.
 * `localhost:3000/investors/[:id]/edit` will render a form to edit an existing Investor, and will PATCH to the database if the entered data is valid. Client is redirected to that Investor show page if successful
