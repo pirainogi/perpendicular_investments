@@ -13,7 +13,7 @@ Full-Stack Rails application with Investor CRUD functionality
 * `mini_magick` for image preview
 
 ## Prerequisites
-You will need `ruby` version `2.6.3`, `rails` version `5.2.4` and `bundle` installed on your computer in order to run this app. You will also need PostgreSQL installed and running in order to create and migrate your database.
+You will need `ruby` version `2.6.3`, `rails` version `5.2.4` and `bundle` installed on your computer in order to run this app. You will also need `PostgreSQL` installed and running in order to create and migrate your database.
 
 In order to run this app, first clone this repo down onto your local machine and navigate to that directory. Then run `bundle install` in order to install all of the necessary gems locally.
 
