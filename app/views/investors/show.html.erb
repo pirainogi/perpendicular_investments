@@ -35,5 +35,19 @@
   <%= @investor.zip_code %>
 </p>
 
+<ul>
+  <% @investor.files.each do |file| %>
+    <li>
+    <% if file.previewable? %>
+      <%= image_tag file.preview(resize: "100x100") %>
+    <% elsif file.representable? %>
+      <%= image_tag url_for(file) %>
+    <% else %>
+      <p>Preview Not Available </p>
+    <% end %>
+    </li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_investor_path(@investor) %> |
 <%= link_to 'Back', investors_path %>
