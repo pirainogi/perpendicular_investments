@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @investors = @user.investors.all
+    byebug
+    # @investors = @user.investors.all
   end
 
   # GET /users/new
