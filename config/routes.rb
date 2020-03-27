@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :investors
 
 
-  get '/login', to: "sessions#login", as: "login"
-  post '/sessions', to: "sessions#create"
+  get 'login', to: "sessions#new"
+  post 'login', to: "sessions#create"
+  get 'home', to: "sessions#home"
   delete 'logout', to: "sessions#destroy"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
