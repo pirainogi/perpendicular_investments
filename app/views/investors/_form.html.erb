@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :dob %>
-    <%= form.datetime_select :dob %>
+    <%= form.date_select :dob, :start_year=>1930, :end_year=>2015 %>
   </div>
 
   <div class="field">
     <%= form.label :phone %>
-    <%= form.number_field :phone %>
+    <%= form.text_field :phone %>
   </div>
 
   <div class="field">
@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= form.label :zip_code %>
-    <%= form.number_field :zip_code %>
+    <%= form.text_field :zip_code %>
   </div>
 
   <div class="actions">

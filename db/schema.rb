@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(version: 2020_03_27_114309) do
     t.string "first_name"
     t.string "last_name"
     t.datetime "dob"
-    t.integer "phone"
+    t.string "phone"
     t.string "street_address"
     t.string "state_address"
-    t.integer "zip_code"
+    t.string "zip_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
