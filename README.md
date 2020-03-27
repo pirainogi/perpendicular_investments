@@ -29,11 +29,11 @@ In order to run this app, first clone this repo down onto your local machine and
 
 ## Navigation in Browser 
 Your server will automatically spin up on `localhost:3000` unless otherwise specified. When you navigate there in the browser, you should see the standard `You're on Rails` homepage. The available routes to you include: 
-* localhost:3000/investors will render all of the investors 
-* localhost:3000/investors/new will render a form to create a new investor, and will POST to the database if the entered data is valid
+* `localhost:3000/investors` will render all of the investors 
+* `localhost:3000/investors/new` will render a form to create a new investor, and will POST to the database if the entered data is valid
   * The form allows the client to select _multiple_ files and they are associated with that Investor. Files are saved locally. JS and CSS are implemented to render file upload progress for all selected files.  
-* localhost:3000/investors/[:id] will render a specific investor with previews for image and PDF files. A link to download the file is also rendered. 
-* localhost:3000/investors/[:id]/edit will render a form to edit an existing investor, and will PATCH to the database if the entered data is valid 
+* `localhost:3000/investors/[:id]` will render a specific investor with previews for image and PDF files. A link to download the file is also rendered. 
+* `localhost:3000/investors/[:id]/edit` will render a form to edit an existing investor, and will PATCH to the database if the entered data is valid 
 
 The application also includes DELETE functionality via a link. 
 
