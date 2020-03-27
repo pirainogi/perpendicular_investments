@@ -28,7 +28,7 @@ In order to run this app, first clone this repo down onto your local machine and
 * `rails s` to spin up your sever
 
 ## Navigation in Browser
-Your server will automatically spin up on `localhost:3000` unless otherwise specified. When you navigate there in the browser, you should see the standard `You're on Rails` homepage. The available routes to you include:
+Your server will automatically spin up on `localhost:3000` unless otherwise specified. The available routes to you include:
 * `localhost:3000/` will render the homepage and direct clients to either login or signup
 * `localhost:3000/login` will render the login form and authenticate/authorize previously created users to access the application. The client is redirected to their user page if successful.
 * `localhost:3000/users/new` will render a form to create a new user, and will POST to the database if the entered data is valid. Client is redirected to their User show page if successful
@@ -49,7 +49,7 @@ Investors also includes Delete functionality. Includes are links to aid in navig
 [Active Storage Overview](https://edgeguides.rubyonrails.org/active_storage_overview.html)
 
 ## WIP
-**Update:** User model is correctly associated with Investor model and functional. Complete User authentication/authorization is implemented. 
+**Update:** User model is correctly associated with Investor model and functional. Complete User authentication/authorization is implemented.
 
 ## Future Features
 * Tests
