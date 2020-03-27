@@ -46,6 +46,11 @@
     <%= form.text_field :zip_code %>
   </div>
 
+  <div class="field">
+  <%= form.label :files %>
+  <%= form.file_field :files, direct_upload: true %>
+</div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
