@@ -34,7 +34,7 @@ The application also includes DELETE functionality via a link.
 Investors also includes Delete functionality. Includes are links to aid in navigation. 
 
 ## Resources: 
-!(Active Storage Overview)[https://edgeguides.rubyonrails.org/active_storage_overview.html]
+![Active Storage Overview](https://edgeguides.rubyonrails.org/active_storage_overview.html)
 
 ## WIP 
 I attempted to create a User model with associated authorization and authentication on a separate branch. Users would have_many Investors and Investors would belong_to a User. Not yet completed. 
