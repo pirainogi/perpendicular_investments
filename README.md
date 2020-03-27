@@ -44,3 +44,7 @@ Investors also includes Delete functionality. Includes are links to aid in navig
 
 ## WIP 
 I attempted to create a User model with associated authorization and authentication on a separate `User` branch. Users would have_many Investors and Investors would belong_to a User. Not yet completed. At this time, login/logout functionality is broken, and Investors are not yet associated with Users. Users cannot view their associated Investors as the functionality has not yet been created. 
+
+## Future Features 
+* Tests 
+* Ability to detect creation of new Investor when update of existing Investor is actually necessary 
