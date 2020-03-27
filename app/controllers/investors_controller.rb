@@ -4,8 +4,8 @@ class InvestorsController < ApplicationController
   # GET /investors
   # GET /investors.json
   def index
-    @investors = Investor.all
     @user = User.find_by(id: session[:user_id])
+    @investors = @user.investors
   end
 
   # GET /investors/1
@@ -25,7 +25,6 @@ class InvestorsController < ApplicationController
   # POST /investors
   # POST /investors.json
   def create
-    byebug
     @investor = Investor.new(investor_params)
 
     respond_to do |format|
