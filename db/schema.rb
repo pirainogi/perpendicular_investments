@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_03_27_152752) do
   end
 
   create_table "investors", force: :cascade do |t|
+    t.integer "user_id"
     t.string "first_name"
     t.string "last_name"
     t.datetime "dob"
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_03_27_152752) do
     t.string "zip_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_investors_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

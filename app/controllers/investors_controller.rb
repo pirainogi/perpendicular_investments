@@ -15,7 +15,6 @@ class InvestorsController < ApplicationController
   # GET /investors/new
   def new
     @investor = Investor.new
-    
   end
 
   # GET /investors/1/edit
@@ -25,6 +24,7 @@ class InvestorsController < ApplicationController
   # POST /investors
   # POST /investors.json
   def create
+    byebug
     @investor = Investor.new(investor_params)
 
     respond_to do |format|
@@ -70,6 +70,6 @@ class InvestorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def investor_params
-      params.require(:investor).permit(:first_name, :last_name, :dob, :phone, :street_address, :state_address, :zip_code, files: [])
+      params.require(:investor).permit(:first_name, :last_name, :dob, :phone, :street_address, :state_address, :zip_code, :user_id, files: [])
     end
 end
