@@ -5,6 +5,7 @@ class InvestorsController < ApplicationController
   # GET /investors.json
   def index
     @investors = Investor.all
+    @user = User.find_by(id: session[:user_id])
   end
 
   # GET /investors/1
