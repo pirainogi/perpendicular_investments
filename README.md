@@ -35,9 +35,9 @@ Your server will automatically spin up on `localhost:3000` unless otherwise spec
 * `localhost:3000/investors/[:id]` will render a specific investor with previews for image and PDF files. A link to download the file is also rendered. 
 * `localhost:3000/investors/[:id]/edit` will render a form to edit an existing investor, and will PATCH to the database if the entered data is valid 
 
-The application also includes DELETE functionality via a link. 
+The application also includes DELETE functionality for Investors via a link. 
 
-Investors also includes Delete functionality. Includes are links to aid in navigation. 
+Included are links throughout to aid in navigation. 
 
 ## Resources: 
 [Active Storage Overview](https://edgeguides.rubyonrails.org/active_storage_overview.html)
