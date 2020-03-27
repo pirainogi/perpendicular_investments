@@ -1,0 +1,28 @@
+<link rel=“stylesheet” href=“/assets/stylesheets/startup.scss”>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <link rel=“stylesheet” href=“/assets/stylesheets/index.css”>
+  <title>login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1>Login</h1>
+
+  <% if flash[:unauthenticated] %>
+    <p style="color:red;"><%= flash[:unauthenticated] %></p>
+  <% end %>
+
+  <%= form_tag("/sessions") do %>
+    <%= label_tag :username %>
+    <%= text_field_tag :username %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+
+    <%= submit_tag "Log in" %>
+  <% end %>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <body>
+    <h5>Login</h5>
+    <% if flash[:unauthenticated] %>
+      <p style="color:red;"><%= flash[:unauthenticated] %></p>
+    <% end %>
+
+    <%= form_tag("/sessions") do %>
+      <%= label_tag :username %>
+      <%= text_field_tag :username %>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+
+      <%= submit_tag "Log in" %>
+    <% end %><br>
+
+    <h5> New User?</h5> <%= link_to "Sign Up Here", new_user_path, :method => "get" %>
+  </body>
+
+</html>
