@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'startup/index'
-  resources :users
+  resources :users, except: :index
   resources :investors
 
 
