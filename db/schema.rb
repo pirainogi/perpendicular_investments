@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_27_114309) do
+ActiveRecord::Schema.define(version: 2020_03_27_152752) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_03_27_114309) do
   end
 
   create_table "investors", force: :cascade do |t|
+    t.integer "user_id"
     t.string "first_name"
     t.string "last_name"
     t.datetime "dob"
@@ -41,6 +42,14 @@ ActiveRecord::Schema.define(version: 2020_03_27_114309) do
     t.string "street_address"
     t.string "state_address"
     t.string "zip_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_investors_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

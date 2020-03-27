@@ -4,7 +4,8 @@ class InvestorsController < ApplicationController
   # GET /investors
   # GET /investors.json
   def index
-    @investors = Investor.all
+    @user = User.find_by(id: session[:user_id])
+    @investors = @user.investors
   end
 
   # GET /investors/1
@@ -69,6 +70,6 @@ class InvestorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def investor_params
-      params.require(:investor).permit(:first_name, :last_name, :dob, :phone, :street_address, :state_address, :zip_code, files: [])
+      params.require(:investor).permit(:first_name, :last_name, :dob, :phone, :street_address, :state_address, :zip_code, :user_id, files: [])
     end
 end

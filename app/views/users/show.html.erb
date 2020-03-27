@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
+<h1>Your User Information</h1>
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
 
-<h1>Investors</h1>
+
+<%= link_to "Log out", logout_path, method: :delete %> | <%= link_to 'Edit User', edit_user_path(@user) %> | <%= link_to 'Destroy User', @user, method: :delete, data: { confirm: 'Are you sure? All  Investors associated with this User will also be deleted.' } %>
+
+<h3>Your Investors</h3>
 
 <table>
   <thead>
@@ -17,7 +25,7 @@
   </thead>
 
   <tbody>
-    <% @investors.each do |investor| %>
+    <% @user.investors.each do |investor| %>
       <tr>
         <td><%= investor.first_name %></td>
         <td><%= investor.last_name %></td>
@@ -36,4 +44,4 @@
 
 <br>
 
-<%= link_to 'Your User', user_path(@user) %> | <%= link_to 'New Investor', new_investor_path %> | <%= link_to "Log out", logout_path, method: :delete %> 
+<%= link_to 'Create New Investor', new_investor_path %>
