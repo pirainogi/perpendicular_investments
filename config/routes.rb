@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :investors
 
 
-  get '/login', to: "sessions#login", as: 'login'
+  get '/login', to: "sessions#login"
   post '/sessions', to: "sessions#create"
   delete 'logout', to: "sessions#logout"
   root "startup#index"
