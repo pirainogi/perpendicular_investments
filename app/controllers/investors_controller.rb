@@ -15,6 +15,7 @@ class InvestorsController < ApplicationController
   # GET /investors/new
   def new
     @investor = Investor.new
+    
   end
 
   # GET /investors/1/edit

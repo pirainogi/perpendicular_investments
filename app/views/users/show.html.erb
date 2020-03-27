@@ -10,4 +10,7 @@
   <%= @user.password_digest %>
 </p>
 
+<%= link_to 'New Investor', new_investor_path %>
+<br><br>
+
 <%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
