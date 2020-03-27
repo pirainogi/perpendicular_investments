@@ -43,4 +43,4 @@ Investors also includes Delete functionality. Includes are links to aid in navig
 [Active Storage Overview](https://edgeguides.rubyonrails.org/active_storage_overview.html)
 
 ## WIP 
-I attempted to create a User model with associated authorization and authentication on a separate branch. Users would have_many Investors and Investors would belong_to a User. Not yet completed. 
+I attempted to create a User model with associated authorization and authentication on a separate `User` branch. Users would have_many Investors and Investors would belong_to a User. Not yet completed. At this time, login/logout functionality is broken, and Investors are not yet associated with Users. Users cannot view their associated Investors as the functionality has not yet been created. 
