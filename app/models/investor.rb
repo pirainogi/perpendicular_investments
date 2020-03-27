@@ -1,4 +1,5 @@
 class Investor < ApplicationRecord
+  belongs_to :user 
   has_many_attached :files
 
   validates :first_name, presence: true, length: {minimum: 2}
