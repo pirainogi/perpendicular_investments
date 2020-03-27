@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'sessons/new'
+  get 'sessons/create'
+  get 'sessons/login'
+  get 'sessons/home'
+  get 'sessons/logout'
   get 'startup/index'
   resources :users, except: :index
   resources :investors
